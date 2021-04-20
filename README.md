@@ -40,8 +40,8 @@ Project is created with:
 
 ## Images:
 1. Landing Page ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/lading-page.PNG)
-2. Home Details ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/index-page.PNG)
-3. Detail Files ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/detail-page.PNG)
+2. Home ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/index-page.PNG)
+3. Detail Page ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/detail-page.PNG)
 4. Login Page ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/login%20page.PNG)
 
 ## Status:
