@@ -36,7 +36,7 @@ Project is created with:
 * Improve UI.
 * Add user voting.
 
-###Live App: *in progress*
+### Live App: *in progress*
 
 ## Images:
 1. Landing Page ![alt text](https://github.com/joshuaconstante2197/Anime-Recommendations-App/blob/master/lib/img/lading-page.PNG)
