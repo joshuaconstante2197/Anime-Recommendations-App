@@ -25,7 +25,7 @@ router.post("/register",function(req,res){
 		avatar:req.body.avatar
 	});
 	console.log(newUser);
-	if(req.body.secret === 'piripitiflautica'){
+	if(req.body.secret === process.env.ADMIN_SECRET){
 			newUser.isAdmin = true;
 			console.log(newUser);
 		}

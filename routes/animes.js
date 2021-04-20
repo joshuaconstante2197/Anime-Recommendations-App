@@ -87,11 +87,8 @@ router.put("/:id",middlewareObj.isLoggedIn,middlewareObj.checkAnimeOwnership,fun
 	
 	Anime.findByIdAndUpdate(req.params.id,req.body.campground,{new:true}, function(err,userAnime){
 		if(err){
-			console.log("error bitch",err)	
+			console.log("error",err)	
 		}else{
-			console.log("UPDATE was succesful");
-			console.log("anime author info",userAnime)
-			console.log("")
 			res.redirect("/anime/"+req.params.id);
 		}
 	});
@@ -104,7 +101,6 @@ router.delete("/:id",middlewareObj.isLoggedIn,middlewareObj.checkAnimeOwnership,
 			console.log(err);
 			res.redirect("/animes");
 		}else{
-			console.log("anime deleted",req.params.id);
 			res.redirect("/animes");
 			
 		}
