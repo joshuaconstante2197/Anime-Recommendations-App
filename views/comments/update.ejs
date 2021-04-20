@@ -1,0 +1,20 @@
+<%- include ("../partials/header") %>
+
+<div class="container">
+	<div class="row">
+		<h1 style="text-align:center">Update your comment for</h1>
+		<div style="width: 30%; margin:35px auto;">
+			<form  action="/animes/<%=anime_id%>/comments/<%=comment.id%>?_method=PUT" method="POST">
+				<div class="form-group">
+					<label>Text</label>
+					<textarea class="form-control" type="text" name="comment[text]"  rows="4" cols="10" wrap="soft"><%=comment.text%> </textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-success btn-block">Submit Please!</button>
+				</div>
+			</form>
+			<a href="/animes">View all Animes</a>
+		</div>	
+	</div>
+</div>
+<%- include ("../partials/footer") %>

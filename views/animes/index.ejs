@@ -1,0 +1,91 @@
+<%- include ("../partials/header") %>
+
+
+
+<div class="container">
+	
+
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Welcome to my Anime Recommendation site!</h1>
+			<p>Check out my recommened Animes, user recommendatios or IMDb top listed animes</p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="/">Back to landing page</a>
+				<a class="btn btn-success btn-lg" href="/animes/new">Add New Anime</a>
+			</p>
+			<p>
+				<form action="/animes" method="GET" class="form-inline">
+					<div class="form-group">
+						<input type="text" name="search" placeholder="Anime search..." class="form-control">
+						<input type="submit" value="Search" class="btn btn-default">
+					</div>
+				</form>
+			</p>
+		</div>
+
+	</header>
+	
+	<div class="row">
+		<div class=col-lg-12>
+		<% if(noMatch!==undefined) {%>
+			<h3><%=noMatch%></h3>
+		<%}else{%>
+		</div>
+		<div class="col-lg-12 index-section_title"> 
+			<h3>
+				IMDb top 5 animes
+			</h3>
+		</div>
+	</div>
+	<div class="row text-center" style="display:flex; flex-wrap:wrap">
+		<% animes.forEach(function(anime){%>
+			<%if(anime.author.username === "IMDb"){%>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img class="thumbnail-img__index"  src="<%=anime.image%>">
+						<div class="caption">
+							<h4><%=anime.name%></h4>  
+						</div>
+						<p>
+							<a href="/animes/<%=anime._id%>" class="btn btn-primary">More Info</a>
+							
+						</p>
+					</div>
+				</div>
+			<%}%>
+		<%})%>
+	<%}%>	
+	</div>
+
+	<div class="row">
+		<div class=col-lg-12>
+		<% if(noMatch!==undefined) {%>
+			<h3><%=noMatch%></h3>
+		<%}else{%>
+		</div>
+		<div class="col-lg-12 index-section_title"> 
+			<h3>
+				My top 5 animes
+			</h3>
+		</div>
+	</div>
+	<div class="row text-center" style="display:flex; flex-wrap:wrap">
+		<% animes.forEach(function(anime){%>
+			<%if(anime.author.username === "Creator"){%>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img class="thumbnail-img__index"  src="<%=anime.image%>">
+						<div class="caption">
+							<h4><%=anime.name%></h4>  
+						</div>
+						<p>
+							<a href="/animes/<%=anime._id%>" class="btn btn-primary">More Info</a>
+							
+						</p>
+					</div>
+				</div>
+			<%}%>
+		<%})%>
+	<%}%>	
+	</div>
+<%- include ("../partials/footer") %>

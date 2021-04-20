@@ -1,0 +1,27 @@
+<%- include ("../partials/header") %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<h1>User <%=user.username%></h1>
+				<img src="<%=user.avatar%>">
+				<div class="caption"><li>First Name: <%=user.firstName%></li></div>
+				<div class="caption"><li>Last Name: <%=user.lastName%></li></div>
+				<div class="caption"><li><%=user.email%></li></div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<%animes.forEach(function(anime){%>
+			<div class="col-md-4 ">
+				<div class="thumbnail userCamps">
+					<h3><a href="/animes/<%=anime.id%>"><%=anime.name%></a></h3>
+					<img src="<%=anime.image%>">
+				</div>
+			</div>	
+			<%});%>	
+		</div>
+		
+	</div>
+</div>
+
+<%- include ("../partials/footer")%>
